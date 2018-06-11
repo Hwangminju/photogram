@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <div style="margin-top:30px;">
+           <% if user_signed_in? %> 
+               <span><%= current_user.name %>님 환영합니다.</span> 
+            <% else %> 
+                <span>로그인 해주세요 :)</span> 
+            <% end %>
+            
+            <h1 style="font-family: 'Indie Flower', cursive; font-size:80px;">Photogram</h1>
+        </div>
+    </head>
+</html>
