@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'posts/index'
   get 'sessions/new'
   get 'users/new'
-  resources :users
+  resources :users, only: [:index, :show, :edit, :update], :controllers => { registrations: 'registrations' }
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts, except: [:show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,4 +1,15 @@
 class UsersController < ApplicationController
+  
+  def index
+    @users = User.all
+  end
+  
+  def show
+  end
+  
+  def new
+  end
+  
   def create 
     User.create(email: params[:email], 
     password: params[:password], 
@@ -6,4 +17,5 @@ class UsersController < ApplicationController
     name: params[:name])
     redirect_to '/' 
   end
+  
 end
